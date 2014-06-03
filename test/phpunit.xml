@@ -1,0 +1,10 @@
+<phpunit backupGlobals="false"
+	backupStaticAttributes="false"
+	syntaxCheck="false">
+
+	<testsuites>
+		<testsuite name="TwitteringTests">
+			<directory suffix=".php">Twittering</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

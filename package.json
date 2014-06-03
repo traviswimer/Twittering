@@ -1,0 +1,21 @@
+{
+  "name": "Twittering.php",
+  "version": "0.0.1",
+  "description": "Twitter oAuth/API library.",
+  "main": "",
+  "private": true,
+  "keywords": [],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-phpunit": "~0.3.3"
+  },
+  "contributors": [
+    {
+      "name": "Travis Wimer",
+      "url": "http://traviswimer.com"
+    }
+  ]
+}
