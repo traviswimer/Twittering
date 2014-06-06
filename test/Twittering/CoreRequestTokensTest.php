@@ -13,7 +13,10 @@ class CoreRequestTokensTest extends PHPUnit_Framework_TestCase{
 		$this->twitterOAuthWrapperStub = $this->getMockBuilder('Twittering\TwitterOAuthWrapper')
 			->disableOriginalConstructor()
 			->getMock();
-		$this->twitterOAuthStub = $this->getMockBuilder('\TwitterOAuth')
+		$this->twitterOAuthStub = $this->getMockBuilder('TwitterOAuth')
+			->setMethods(array(
+				'getRequestToken', 'getAuthorizeURL', 'getAccessToken'
+			))
 			->disableOriginalConstructor()
 			->getMock();
 
@@ -33,6 +36,14 @@ class CoreRequestTokensTest extends PHPUnit_Framework_TestCase{
 	}
 
 	public function testNoParameters(){
+
+		$this->twitterOAuthStub->expects($this->any())
+			->method('getRequestToken')
+			->will($this->returnValue(array(
+				"oauth_token" => "1234",
+				"oauth_token_secret" => "5678"
+			)));
+
 		$this->twitterOAuthStub->expects($this->any())
 			->method('getAuthorizeURL')
 			->will($this->returnValue("http://fake.url"));
