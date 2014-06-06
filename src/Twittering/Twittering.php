@@ -14,12 +14,12 @@ class Twittering{
 		$this->coreObject = new Core( $app_auth_info );
 	}
 
-	public function requestAccess(){
-		$coreObject->requestAccess();
+	public function requestTokens( $url=NULL, $redirect=true ){
+		$coreObject->requestTokens( $url, $redirect );
 	}
 
-	public function authenticate(){
-		$coreObject->authenticate();
+	public function authenticate( $tokens ){
+		$coreObject->authenticate( $tokens );
 	}
 
 }
