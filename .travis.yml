@@ -3,6 +3,6 @@ php:
   - 5.5
   - 5.4
 
-before_script:
+script:
   - composer install
   - phpunit --configuration test/phpunit.xml --bootstrap test/phpunitBootstrap.php --coverage-text
