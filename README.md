@@ -1,4 +1,4 @@
-# Twittering [![Build Status](https://travis-ci.org/traviswimer/twittering.png?branch=master)](https://travis-ci.org/traviswimer/twittering)
+# Twittering [![Build Status](https://travis-ci.org/traviswimer/Twittering.png?branch=master)](https://travis-ci.org/traviswimer/Twittering)
 
 > PHP class that makes Twitter oAuth token requests and authentication as simple as possible. (Built on the [TwitterOAuth package](https://github.com/abraham/twitteroauth))
 
