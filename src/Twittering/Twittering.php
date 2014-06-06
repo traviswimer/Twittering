@@ -11,7 +11,7 @@ class Twittering{
 	private $coreObject;
 
 	function __construct( array $app_auth_info ){
-		$this->coreObject = new Core( $app_auth_info );
+		$this->coreObject = new Core( $app_auth_info, new Util(), new TwitterOAuthWrapper() );
 	}
 
 	public function requestTokens( $url=NULL, $redirect=true ){
