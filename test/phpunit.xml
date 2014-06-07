@@ -11,8 +11,8 @@
 	<filter>
 		<blacklist>
 			<directory suffix=".php">../vendor</directory>
-			<file>../src/Twittering/Util.php</file>
-			<file>../src/Twittering/TwitterOAuthWrapper.php</file>
+			<file>../src/Util.php</file>
+			<file>../src/TwitterOAuthWrapper.php</file>
 		</blacklist>
 	</filter>
 </phpunit>
