@@ -6,7 +6,7 @@ class TwitterOAuthWrapper{
 	public $connection;
 
 	public function connect( $consumer_key, $consumer_secret, $oauth_token = NULL, $oauth_token_secret = NULL ){
-		$this->connection = new \TwitterOAuth(
+		$this->connection = new \TwitterOAuth\Api(
 			$consumer_key,
 			$consumer_secret,
 			$oauth_token,
