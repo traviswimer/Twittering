@@ -48,7 +48,7 @@ $timeline = $apiConnection->get( 'statuses/home_timeline', array('count' => '10'
 	*	"api_key" - Your app's consumer key
 	*	"api_secret" - Your app's consumer secret
 
-### requestTokens( $callback_url, $redirect );
+### `requestTokens( $callback_url, $redirect );`
 
 *This method behaves differently if the $_GET variables `oauth_token` and `oauth_verifier` are set*
 
@@ -65,7 +65,7 @@ $timeline = $apiConnection->get( 'statuses/home_timeline', array('count' => '10'
 
 No parameters are needed during this second pass. This will return an array containing the user's long-term tokens that can be stored in your database. You can also pass this array directly to the `authenticate()` method.
 
-### authenticate( $tokens );
+### `authenticate( $tokens );`
 
 >	This method creates an object can interact with the Twitter API on the authenticated user's behalf.
 
