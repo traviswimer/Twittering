@@ -15,11 +15,11 @@ class Twittering{
 	}
 
 	public function requestTokens( $url=NULL, $redirect=true ){
-		$this->coreObject->requestTokens( $url, $redirect );
+		return $this->coreObject->requestTokens( $url, $redirect );
 	}
 
 	public function authenticate( $tokens ){
-		$this->coreObject->authenticate( $tokens );
+		return $this->coreObject->authenticate( $tokens );
 	}
 
 }
