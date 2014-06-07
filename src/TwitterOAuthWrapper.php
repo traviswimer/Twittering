@@ -12,6 +12,7 @@ class TwitterOAuthWrapper{
 			$oauth_token,
 			$oauth_token_secret
 		);
+		$this->connection->host = "https://api.twitter.com/1.1/";
 
 		return $this->connection;
 	}
