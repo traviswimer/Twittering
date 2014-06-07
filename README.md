@@ -1,6 +1,6 @@
 # Twittering [![Build Status](https://travis-ci.org/traviswimer/Twittering.png?branch=master)](https://travis-ci.org/traviswimer/Twittering)
 
-> PHP class that makes Twitter oAuth token requests and authentication as simple as possible. (Built on the [TwitterOAuth package](https://github.com/abraham/twitteroauth))
+> PHP class for simple Twitter oAuth token requests, authentication, and API v1.1 requests. (Built on the [TwitterOAuth package](https://github.com/abraham/twitteroauth))
 
 ## Getting Started
 
@@ -11,13 +11,16 @@ Install with [Composer](https://getcomposer.org/) by adding this to your `compos
 	"traviswimer/twittering": "dev-master"
 }
 ```
-Then run `php composer.phar install`
+Then run `compsoser install` or `php composer.phar install`, depending on your setup.
 
 ## Example usage
 
 ```php
+// Include Composer autoloader
+require_once __DIR__.'/vendor/autoload.php';
+
 // First create initialize a Twittering object with you API key/secret
-$twittering = new Twittering(array(
+$twittering = new \Twittering\Twittering(array(
 	"api_key" => "YOUR_CONSUMER_KEY",
 	"api_secret" => "YOUR_CONSUMER_SECRET",
 ));
@@ -34,7 +37,7 @@ $tokens = $twittering->requestTokens();
 $apiConnection = $twittering->authenticate( $tokens );
 
 // You are now ready to make API requests
-$status = $apiConnection->post('statuses/update', array('status' => 'Text of status here', 'in_reply_to_status_id' => 123456));
+$timeline = $apiConnection->get( 'statuses/home_timeline.json', array('count' => '10') );
 ```
 
 ## Contributing
