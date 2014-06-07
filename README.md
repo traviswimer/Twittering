@@ -37,7 +37,7 @@ $tokens = $twittering->requestTokens();
 $apiConnection = $twittering->authenticate( $tokens );
 
 // You are now ready to make API requests
-$timeline = $apiConnection->get( 'statuses/home_timeline.json', array('count' => '10') );
+$timeline = $apiConnection->get( 'statuses/home_timeline', array('count' => '10') );
 ```
 
 ## Contributing
